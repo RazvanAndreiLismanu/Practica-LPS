@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func cambiarColorBtn(sender: UIButton) {
-        self.view.backgroundColor=colorearAleatoriamente()
+        self.view.backgroundColor=cambiarColor()
     }
     
     
@@ -50,7 +50,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         nombreTxt.delegate=self;
         apellidoTxt.delegate=self;
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func colorearAleatoriamente() -> UIColor{
+    func cambiarColor() -> UIColor{
         
         let red:CGFloat=CGFloat(drand48())
         let green:CGFloat=CGFloat(drand48())
