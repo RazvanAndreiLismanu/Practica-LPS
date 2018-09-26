@@ -27,7 +27,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-He-waa">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="220" placeholderIntrinsicHeight="31" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-He-waa">
                                         <rect key="frame" x="0.0" y="33" width="220" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="220" id="5l8-3q-aVc"/>
@@ -35,7 +35,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yF-gw-vxm">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yF-gw-vxm">
                                         <rect key="frame" x="0.0" y="76" width="39" height="30"/>
                                         <state key="normal" title="Reset">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,7 +45,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="106" id="anG-Yx-JVQ"/>
                                     <constraint firstAttribute="width" constant="560" id="cMv-7P-BPG"/>
-                                    <constraint firstAttribute="trailing" secondItem="H7B-He-waa" secondAttribute="trailing" id="p6C-Ns-Jef"/>
                                 </constraints>
                             </stackView>
                         </subviews>
