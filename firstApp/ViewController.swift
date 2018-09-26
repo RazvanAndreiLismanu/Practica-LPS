@@ -29,9 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cambiarColorBtn(sender: UIButton) {
         self.view.backgroundColor=cambiarColor()
-    }
-    
-    
+    }   
     
     // MARK: UITextFieldDelegate
     func textFieldShouldReturn(textField: UITextField) -> Bool{
@@ -43,8 +41,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         nombreLbl.text = "Hola " + nombreTxt.text! + " " + apellidoTxt.text!
     }
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
