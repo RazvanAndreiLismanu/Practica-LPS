@@ -8,10 +8,48 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+    
+    //MARK: properties
+    
+    @IBOutlet weak var nombreLbl: UILabel!
+    
+    @IBOutlet weak var nombreTxt: UITextField!
+    
+    @IBOutlet weak var apellidoTxt: UITextField!
+    
+    
+    //MARK: actions
+    
+    @IBAction func serResetBtn(sender: UIButton) {
+        nombreLbl.text="Hola desconocido";
+        nombreTxt.text="";
+        apellidoTxt.text="";
+    }
+    
+    @IBAction func cambiarColorBtn(sender: UIButton) {
+        self.view.backgroundColor=colorearAleatoriamente()
+    }
+    
+    
+    
+    // MARK: UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        nombreLbl.text = "Hola " + nombreTxt.text! + " " + apellidoTxt.text!
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nombreTxt.delegate=self;
+        apellidoTxt.delegate=self;
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -19,7 +57,15 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func colorearAleatoriamente() -> UIColor{
+        
+        let red:CGFloat=CGFloat(drand48())
+        let green:CGFloat=CGFloat(drand48())
+        let blue:CGFloat=CGFloat(drand48())
+        
+        return UIColor(red:red,green:green,blue:blue,alpha:1.0)
+    }
 
 }
 

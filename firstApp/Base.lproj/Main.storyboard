@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="RUc-pB-NwP">
-                                <rect key="frame" x="20" y="80" width="560" height="106"/>
+                                <rect key="frame" x="20" y="80" width="560" height="175"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNw-oG-NR5">
-                                        <rect key="frame" x="0.0" y="0.0" width="146" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola desconocido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNw-oG-NR5">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -30,20 +30,45 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="220" placeholderIntrinsicHeight="31" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-He-waa">
                                         <rect key="frame" x="0.0" y="33" width="220" height="31"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="220" id="5l8-3q-aVc"/>
+                                            <constraint firstAttribute="height" constant="31" id="E4W-FW-Oes"/>
+                                            <constraint firstAttribute="width" constant="220" id="svr-xq-Tri"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yF-gw-vxm">
-                                        <rect key="frame" x="0.0" y="76" width="39" height="30"/>
-                                        <state key="normal" title="Reset">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voc-Oa-1Yv">
+                                        <rect key="frame" x="0.0" y="76" width="220" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="jF8-0H-OV9"/>
+                                            <constraint firstAttribute="height" constant="31" id="rjH-24-a06"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vnS-va-0bV">
+                                        <rect key="frame" x="0.0" y="119" width="147" height="56"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yF-gw-vxm">
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="56"/>
+                                                <state key="normal" title="Reset">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="serResetBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LPt-QW-AFO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naf-fu-B3b">
+                                                <rect key="frame" x="51" y="0.0" width="96" height="56"/>
+                                                <state key="normal" title="Cambiar color"/>
+                                                <connections>
+                                                    <action selector="cambiarColorBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P8e-3m-UBg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="106" id="anG-Yx-JVQ"/>
+                                    <constraint firstAttribute="height" constant="175" id="anG-Yx-JVQ"/>
                                     <constraint firstAttribute="width" constant="560" id="cMv-7P-BPG"/>
                                 </constraints>
                             </stackView>
@@ -51,10 +76,14 @@
                         <color key="backgroundColor" red="0.056707400800136143" green="0.27557718258084118" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RUc-pB-NwP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="Fad-fp-cby"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RUc-pB-NwP" secondAttribute="bottom" constant="414" id="Nwl-bq-fqb"/>
                             <constraint firstItem="RUc-pB-NwP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lgz-oX-zPy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="apellidoTxt" destination="voc-Oa-1Yv" id="xtH-Rw-YFc"/>
+                        <outlet property="nombreLbl" destination="mNw-oG-NR5" id="PUA-DF-lFi"/>
+                        <outlet property="nombreTxt" destination="H7B-He-waa" id="rbq-sQ-Dng"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
